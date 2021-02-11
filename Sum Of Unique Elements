@@ -1,0 +1,15 @@
+def sumofunique(a):
+    b = {}
+    total = 0
+    for num in a:
+        if num not in b:
+            b[num] = 1
+        else:
+            b[num] += 1
+
+    for k, v in b.items():
+        if v == 1:
+            total += k
+        else:
+            continue
+    return total
