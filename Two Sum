@@ -1,0 +1,13 @@
+nums = [3,2,4]
+target = 6
+l = []
+for i in range(len(nums)):
+    res = target-nums[i]
+    
+    if res not in nums[i+1:]:
+        pass
+    else:
+        l.append(i)
+        l.append(nums.index(res))
+        break
+print(l)
