@@ -1,3 +1,4 @@
+# Two sum using a list
 nums = [3,2,4]
 target = 6
 l = []
@@ -11,3 +12,18 @@ for i in range(len(nums)):
         l.append(nums.index(res))
         break
 print(l)
+
+
+# Two sum using a dictionary
+
+nums = [3,2,4]
+target = 6
+d = {}
+
+for i in range(len(nums)):
+    res = target - nums[i]
+    
+    if res not in d:
+        d[nums[i]] = i
+    else:
+        print([d[target - nums[i]],i])
